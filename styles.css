@@ -37,7 +37,6 @@ a:hover { color: var(--muted); }
 
 .section-title { margin: 0 0 8px; }
 
-.work { display: flex; flex-direction: column; }
 .project { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 32px; align-items: end; padding: 36px 0; border-top: 1px solid var(--line-strong); }
 .project:last-child { border-bottom: 1px solid var(--line-strong); }
 .project h2 { margin: 0; font-size: 36px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; }
@@ -51,6 +50,18 @@ a.project:hover h2 { color: var(--accent); }
 .project.soon { color: var(--muted); }
 .project.soon h2 { color: #A9A5B4; }
 .project.soon .stat span { color: #A9A5B4; }
+
+.work { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 64px 32px; padding-top: 24px; }
+.card { display: flex; flex-direction: column; gap: 16px; }
+.card img { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; border-radius: 16px; transition: opacity .2s; }
+.card .text { display: flex; flex-direction: column; gap: 6px; }
+.card .meta { font-size: 14px; color: var(--muted); }
+.card h2 { margin: 0; font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; }
+.card .result { font-size: 15px; color: var(--muted); }
+.card .result strong { color: var(--accent); font-weight: 600; }
+a.card:hover { color: var(--ink); }
+a.card:hover img { opacity: .92; }
+a.card:hover h2 { color: var(--accent); }
 
 .about { padding: 160px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px 64px; }
 .about h2 { margin: 0 0 20px; font-size: 36px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; }
